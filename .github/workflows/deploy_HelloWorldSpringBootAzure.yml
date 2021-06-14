@@ -19,7 +19,7 @@ jobs:
     - name: Set up Java version
       uses: actions/setup-java@v1
       with:
-        java-version: '8'
+        java-version: '11'
 
     - name: Build with Maven
       run: mvn clean install
@@ -49,5 +49,5 @@ jobs:
       with:
         app-name: 'HelloWorldSpringBootAzure'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_80cf5b10a99c4485b3482c57c1dc5c2f }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_8d52abd667fa4b969b9d97868bae20bc }}
         package: '*.war'
