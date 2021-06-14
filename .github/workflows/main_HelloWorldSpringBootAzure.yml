@@ -28,7 +28,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: java-app
-        path: '${{ github.workspace }}/target/*.war'
+        path: '${{ github.workspace }}/target/*.jar'
 
   deploy:
     runs-on: windows-latest
@@ -50,4 +50,4 @@ jobs:
         app-name: 'HelloWorldSpringBootAzure'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_3721d27717474bfc8b3a34f94b0fadf8 }}
-        package: '*.war'
+        package: '*.jar'
